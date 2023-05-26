@@ -1,4 +1,4 @@
-package com.betterjavacode.keycloakdemo.keycloakdemo.config;
+package com.example.articles.config;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.springframework.context.annotation.Bean;

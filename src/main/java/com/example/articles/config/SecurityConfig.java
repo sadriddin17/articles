@@ -1,4 +1,4 @@
-package com.betterjavacode.keycloakdemo.keycloakdemo.config;
+package com.example.articles.config;
 
 
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
@@ -8,7 +8,6 @@ import org.keycloak.adapters.springsecurity.management.HttpSessionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
@@ -47,7 +46,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         super.configure(httpSecurity);
         httpSecurity.authorizeRequests()
-                .antMatchers("/tasks").hasRole("user")
+                .antMatchers("/test").hasRole("user")
                 //.antMatchers("/tasks").hasRole("admin")
                 .anyRequest().permitAll();
     }

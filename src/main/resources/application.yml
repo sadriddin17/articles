@@ -1,31 +1,6 @@
 server:
   port: 8082
 
-spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/elsevier_db}
-    username: ${POSTGRES_USER:admin}
-    password: ${POSTGRES_PASSWORD:password}
-    hikari:
-      connection-test-query: SELECT 1
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-# ===============================================================================
-# Keycloak Configuration
-# ===============================================================================
-#keycloak:
-#  auth-server-url: http://localhost:8081/auth
-#  realm: master
-#  resource: demo-elsevier
-#  public-client: false
-#
 
 keycloak:
   auth-server-url: https://auth-dev.geofacets.com/auth/
